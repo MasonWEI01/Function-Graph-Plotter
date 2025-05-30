@@ -197,6 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const zoomInButton = document.getElementById('zoomInButton');
     const zoomOutButton = document.getElementById('zoomOutButton');
+    const resetButton = document.getElementById('resetButton');
 
     zoomInButton.addEventListener('click', () => {
         const zoomFactor = 1.2;
@@ -209,6 +210,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const zoomFactor = 1.2;
         scaleX /= zoomFactor;
         scaleY /= zoomFactor;
+        drawGraph();
+    });
+
+    resetButton.addEventListener('click', () => {
+        scaleX = 50; // Reset scale
+        scaleY = 50;
+        originX = graphCanvas.width / 2; // Reset origin to center
+        originY = graphCanvas.height / 2;
         drawGraph();
     });
 
