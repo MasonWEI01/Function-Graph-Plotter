@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mason's Function Graph Plotter (函數圖像繪製器)</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mason's Function Graph Plotter (函數圖像繪製器)</h1>
+        <div class="input-section">
+            <label for="functionInput">y = f(x):</label>
+            <input type="text" id="functionInput" placeholder="e.g., sin(x) + x^2 (例如: sin(x) + x^2)">
+            <label for="xRangeMin">x Range From: (x 範圍從:)</label>
+            <input type="number" id="xRangeMin" value="-10">
+            <label for="xRangeMax">To: (到:)</label>
+            <input type="number" id="xRangeMax" value="10">
+            <button id="drawButton">Plot (繪製)</button>
+        </div>
+        <div class="keyboard-container">
+            <!-- 键盘区域将在这里动态生成 -->
+        </div>
+        <canvas id="graphCanvas"></canvas>
+        <div class="zoom-controls">
+            <button id="zoomInButton">Zoom In (放大)</button>
+            <button id="zoomOutButton">Zoom Out (縮小)</button>
+        </div>
+        <div class="coordinates-display">Mouse Coordinates: (x, y) (滑鼠座標: (x, y))</div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
